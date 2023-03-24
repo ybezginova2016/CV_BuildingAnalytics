@@ -11,8 +11,8 @@
 
 ## Данные (на выбор)
 
-* https://github.com/CipiOrhei/TMBuD
-* https://cmp.felk.cvut.cz/~tylecr1/facade/
+* **[TMBuD Dataset, Feb'2020](https://github.com/CipiOrhei/TMBuD)** (парсинг базы)
+* **[CMP Facade Database (extended dataset)](https://cmp.felk.cvut.cz/~tylecr1/facade/)**
 
 ## Форма для заполнения
 https://docs.google.com/forms/d/e/1FAIpQLSfkavbuwPY20eQVS_dx7daQBGoBnDlGRtbfWzMKdi_tOFUkYg/viewform 
