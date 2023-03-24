@@ -11,6 +11,7 @@
 
 ## Данные (на выбор)
 
+* **[Paris Art Deco Facades Dataset](https://github.com/raghudeep/ParisArtDecoFacadesDataset/)**
 * **[TMBuD Dataset, Feb'2020](https://github.com/CipiOrhei/TMBuD)** (парсинг базы)
 * **[CMP Facade Database (extended dataset)](https://cmp.felk.cvut.cz/~tylecr1/facade/)**
 
