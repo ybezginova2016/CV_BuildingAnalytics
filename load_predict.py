@@ -41,8 +41,44 @@ print("Test Loss:", test_loss)
 print("Test Accuracy:", test_accuracy)
 print("Test Dice Coefficient:", test_dice_coef)
 
-"""
-Test Loss: 0.036116428673267365
-Test Accuracy: 0.48137566447257996
-Test Dice Coefficient: 0.007399423513561487
-"""
+import cv2
+import numpy as np
+from tensorflow.keras.models import load_model
+
+image_size = (128, 128)
+CLASSES = 12
+
+# Load the saved model with the best weights
+model = load_model("C:\\Users\\HOME\\PycharmProjects\\CV_BuildingAnalytics\\model_checkpoint.h5")
+
+# Load the test image and mask
+test_jpg = cv2.imread('C:\\Users\\HOME\\PycharmProjects\\CV_BuildingAnalytics\\cmp_b0366.jpg')
+test_png = cv2.imread('C:\\Users\\HOME\\PycharmProjects\\CV_BuildingAnalytics\\cmp_b0366.png', cv2.IMREAD_GRAYSCALE)
+
+# Resize the image and mask to match the input shape of the model
+test_jpg = cv2.resize(test_jpg, image_size)
+test_png = cv2.resize(test_png, image_size)
+
+# Normalize the image and mask pixel values
+test_jpg = test_jpg / 255.0
+test_png = test_png / 255.0
+
+# Add an extra dimension to the image and mask arrays to match the model input shape
+test_jpg = np.expand_dims(test_jpg, axis=0)
+test_png = np.expand_dims(test_png, axis=-1)
+test_png = np.expand_dims(test_png, axis=0)
+
+# Make predictions on the test image and mask
+pred_mask = model.predict(test_jpg)
+
+# Calculate the dice coefficient for the predicted mask
+dice_coef = dice_coefficient(test_png, pred_mask)
+
+# Display the original image, mask, and predicted mask
+cv2.imshow('Original Image', test_jpg[0])
+cv2.imshow('Ground Truth Mask', test_png[0,:,:,0])
+cv2.imshow('Predicted Mask', create_mask(pred_mask)[0,:,:,0])
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+print("Dice Coefficient:", dice_coef)

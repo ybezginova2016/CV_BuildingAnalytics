@@ -119,7 +119,7 @@ class DataGen(keras.utils.Sequence):
         mask  = []
 
         for i in range(len(image_batch)):
-            for j in range(5):
+            for j in range(10):
                 _img, _mask = self.__load__(image_batch[i])
                 image.append(_img)
                 mask.append(_mask)
