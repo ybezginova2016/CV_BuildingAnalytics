@@ -85,6 +85,16 @@
 * **[TMBuD Dataset, Feb'2020](https://github.com/CipiOrhei/TMBuD)** (парсинг базы)
 * **[CMP Facade Database (extended dataset)](https://cmp.felk.cvut.cz/~tylecr1/facade/)**
 
+## В отчете представлены:
+
+- analysis.ipynb - файл с исходной аналитикой данных, подсчетом предметов на масках. Он используется в паре с labels.csv, где выведены векторизованные метки.
+
+- DataGen.py - написан класс для формирования и предобработки данных перед обучением модели.
+
+- model.ipynb - основной ноутбук с моделями, которые были обучены. Здесь же сохраняется модель в формате .h5 и приводится вывод, какая модель отработала лучше всего и может быть использована на живых данных.
+
+- load_predict.py - файл с предсказаниями на живых данных, может быть использован для деплоя модели.
+
 ## Форма для заполнения
 https://docs.google.com/forms/d/e/1FAIpQLSfkavbuwPY20eQVS_dx7daQBGoBnDlGRtbfWzMKdi_tOFUkYg/viewform 
 
