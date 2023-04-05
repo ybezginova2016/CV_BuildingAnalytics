@@ -85,7 +85,8 @@
 * **[TMBuD Dataset, Feb'2020](https://github.com/CipiOrhei/TMBuD)** (парсинг базы)
 * **[CMP Facade Database (extended dataset)](https://cmp.felk.cvut.cz/~tylecr1/facade/)**
 
-## В отчете представлены:
+## Итоги:
+- основной ноутбук: https://github.com/ybezginova2016/CV_BuildingAnalytics/blob/main/model.ipynb
 
 - analysis.ipynb - файл с исходной аналитикой данных, подсчетом предметов на масках. Он используется в паре с labels.csv, где выведены векторизованные метки.
 
